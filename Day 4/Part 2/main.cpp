@@ -158,10 +158,11 @@ int main() {
     std::string hash;
     std::string code;
 
+
     while(true) {
         code = input + std::to_string(number);
         std::string hash = MD5::hash(code);
-        if(hash.substr(0, 5) == "00000") {
+        if(hash.substr(0, 6) == "000000") {
             std::cout << "Lowest number: " << number << std::endl;
             break;
         }
